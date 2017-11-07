@@ -1,0 +1,63 @@
+/*Совсем не дружу с bootstrap'ом*/
+
+h3 {
+  font-family: Arial;
+  margin-left: 15px;
+}
+
+li {
+  list-style: none;
+  padding: 10px;
+  margin-top: 3px;
+  border: 2px solid grey;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: .5;
+}
+
+button {
+  /*background: #fed136;*/
+  /*color: #484543;*/
+  /*border-radius: 5px;*/
+  /*width: 120px;*/
+  /*padding: 5px 0px;*/
+  /*margin: 0 auto;*/
+  /*text-decoration: none;*/
+  /*text-align: center;*/
+  /*font-weight: bold;*/
+  /*font-size: 20px;*/
+  /*text-transform: uppercase;*/
+  width: 85px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.add_button{
+
+}
+
+.remove_button {
+  float: right;
+}
+
+.edit_button {
+
+}
+
+.input_window {
+  size: 50px;
+  border-radius: 5px;
+}
