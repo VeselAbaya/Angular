@@ -1,5 +1,4 @@
-/*Совсем не дружу с bootstrap'ом*/
-
+/*Совсем не дружу с bootstrap'ом, надеюсь скоро подружиться*/
 h3 {
   font-family: Arial;
   margin-left: 15px;
@@ -23,17 +22,6 @@ ul {
 }
 
 button {
-  /*background: #fed136;*/
-  /*color: #484543;*/
-  /*border-radius: 5px;*/
-  /*width: 120px;*/
-  /*padding: 5px 0px;*/
-  /*margin: 0 auto;*/
-  /*text-decoration: none;*/
-  /*text-align: center;*/
-  /*font-weight: bold;*/
-  /*font-size: 20px;*/
-  /*text-transform: uppercase;*/
   width: 85px;
   background: white;
   color: black;

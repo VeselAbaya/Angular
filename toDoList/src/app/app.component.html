@@ -1,6 +1,8 @@
-
 <h3>
-  <input class="input_window" #newTaskInput type="text">
+  <input class="input_window"
+         #newTaskInput
+         (keypress)="addByEnter($event, newTaskInput.value)"
+         type="text">
   <button class="add_button"
           (click)="add(newTaskInput.value)">
     Add
@@ -8,12 +10,16 @@
   <li *ngFor="let task of tasks; let i = index"
       (click)="toggle(i)"
       [class.complete]="task.complete">
-    <span (click)="edit(i, '')" *ngIf="!task.isEditing; else elseBlock">{{task.title}}</span>
+    <span (click)="edit(i, '')"
+          *ngIf="!task.isEditing; else elseBlock">
+      {{task.title}}
+    </span>
     <ng-template #elseBlock>
       <input #editedTask
-             (click)="toggle(i)"
-             type="text"
-             value={{task.title}}>
+           (click)="toggle(i)"
+           (keypress)="editByEnter($event, i, editedTask.value)"
+           type="text"
+           value={{task.title}}>
       <button class="edit_button" (click)="edit(i, editedTask.value)">Edit</button>
     </ng-template>
     <button class="remove_button" (click)="remove(i)">

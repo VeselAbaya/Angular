@@ -30,6 +30,13 @@ export class AppComponent {
     }
   }
 
+  addByEnter(event, title: string) { // Объясни, пожалуйста, как сделать проще без этой кучи функций отдельно
+                                     // Для кнопок и отдельно для enter'а
+    if (event.keyCode === 13) {
+      this.add(title);
+    }
+  }
+
   toggle(index: number) {
     this.tasks[index].complete = !this.tasks[index].complete;
   }
@@ -43,6 +50,13 @@ export class AppComponent {
     this.tasks[index].isEditing = !this.tasks[index].isEditing;
     if (editedTask.localeCompare('')) {
       this.tasks[index].title = editedTask;
+    }
+  }
+
+  editByEnter(event, i, editedTask) {
+    if (event.keyCode === 13) {
+      this.toggle(i);
+      this.edit(i, editedTask);
     }
   }
 
