@@ -1,9 +1,15 @@
 import { Component } from '@angular/core';
 
-interface ITask {
+class Task {
   title: string;
   complete: boolean;
-  isEditing: false;
+  isEditing: boolean;
+
+  constructor(title, complete = false) {
+    this.title = title;
+    this.complete = false;
+    this.isEditing = false;
+  }
 }
 
 @Component({
@@ -13,28 +19,21 @@ interface ITask {
 })
 
 export class AppComponent {
-  title = 'app';
   tasks = [
-    { title: 'Milk', complete: false, isEditing: false},
-    { title: 'Bread', complete: true, isEditing: false},
-    { title: 'Gun', complete: false, isEditing: false}
+    new Task('buy milk'),
+    new Task('buy Bread'),
+    new Task('buy Gun')
   ];
 
   add(title: string) {
     if (title.localeCompare('')) {
-      this.tasks.push({
-        title,
-        complete: false,
-        isEditing: false
-      });
+      this.tasks.push(new Task(title));
     }
   }
 
   addByEnter(event, title: string) { // Объясни, пожалуйста, как сделать проще без этой кучи функций отдельно
                                      // Для кнопок и отдельно для enter'а
-    if (event.keyCode === 13) {
-      this.add(title);
-    }
+    if (event.keyCode === 13) { this.add(title); }
   }
 
   toggle(index: number) {
@@ -47,9 +46,10 @@ export class AppComponent {
 
   edit(index: number, editedTask: string) {
     this.toggle(index);
-    this.tasks[index].isEditing = !this.tasks[index].isEditing;
+    this.tasks[index].isEditing = true;
     if (editedTask.localeCompare('')) {
       this.tasks[index].title = editedTask;
+      this.tasks[index].isEditing = false;
     }
   }
 

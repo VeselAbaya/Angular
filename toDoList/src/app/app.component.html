@@ -20,7 +20,9 @@
            (keypress)="editByEnter($event, i, editedTask.value)"
            type="text"
            value={{task.title}}>
-      <button class="edit_button" (click)="edit(i, editedTask.value)">Edit</button>
+      <button class="edit_button" (click)="edit(i, editedTask.value)">
+        Edit
+      </button>
     </ng-template>
     <button class="remove_button" (click)="remove(i)">
       Remove
