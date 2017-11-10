@@ -1,0 +1,10 @@
+<div class="app-wrapper">
+  <h1 class="app-header">{{apptitle}}</h1>
+  <hr> <!--горизонтальная разделяющая линия-->
+  <todo-list [todoList]="todoList"
+             (todoClicked)="toggleTodoStatus()"></todo-list>
+  <hr>
+  <counter [allTasksCount]="todoList.length"
+           [completedTasksCount]="getCompletedTaskCount()"></counter>
+</div>
+
