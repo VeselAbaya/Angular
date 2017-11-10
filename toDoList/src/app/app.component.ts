@@ -60,4 +60,10 @@ export class AppComponent {
     }
   }
 
+  startEdit(index, isEditing) {
+    if (index % 2 === 0) {
+      isEditing = false;
+    } else { isEditing = true; }
+  }
+
 }

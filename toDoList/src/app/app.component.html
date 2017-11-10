@@ -8,9 +8,9 @@
     Add
   </button>
   <li *ngFor="let task of tasks; let i = index"
-      (click)="toggle(i)"
-      [class.complete]="task.complete">
+      (click)="toggle(i)">
     <span (click)="edit(i, '')"
+          [class.complete]="task.complete"
           *ngIf="!task.isEditing; else elseBlock">
       {{task.title}}
     </span>
@@ -24,7 +24,8 @@
         Edit
       </button>
     </ng-template>
-    <button class="remove_button" (click)="remove(i)">
+    <button class="remove_button"
+            (click)="remove(i)">
       Remove
     </button>
   </li>
