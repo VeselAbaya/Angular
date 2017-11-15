@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TasksComponent } from "./components/tasks/tasks.component";
-import {TaskService} from "./services/task.service";
+import { TaskService } from "./services/task.service";
+import { FormsModule } from "@angular/forms"; //Заимпортировал и теперь при нажатии на enter
+                                              //срабатывает add;
 
 @NgModule({
   declarations: [
@@ -11,7 +13,7 @@ import {TaskService} from "./services/task.service";
     TasksComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, FormsModule
   ],
   providers: [TaskService],
   bootstrap: [AppComponent]

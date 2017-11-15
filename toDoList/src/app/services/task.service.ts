@@ -12,4 +12,10 @@ export class TaskService {
       new TaskModel('buy Gun')
     ];
   }
+
+  add(tasks: Array<TaskModel>, title: string) {
+    if (title) {
+      tasks.push(new TaskModel(title));
+    }
+  }
 }

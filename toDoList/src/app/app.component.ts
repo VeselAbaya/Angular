@@ -18,13 +18,6 @@ export class AppComponent implements OnInit {
   }
 
   add(title: string) {
-    if (title.localeCompare('')) {
-      this.tasks.push(new TaskModel(title));
-    }
-  }
-
-  addByEnter(event, title: string) { // Объясни, пожалуйста, как сделать проще без этой кучи функций отдельно
-    // Для кнопок и отдельно для enter'а
-    if (event.keyCode === 13) { this.add(title); }
+    this.taskService.add(this.tasks, title);
   }
 }

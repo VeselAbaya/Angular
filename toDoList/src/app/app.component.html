@@ -1,11 +1,11 @@
 <h3>
-  <input class="input_window"
-         #newTaskInput
-         (keypress)="addByEnter($event, newTaskInput.value)"
-         type="text">
-  <button class="add_button"
-          (click)="add(newTaskInput.value)">
-    Add
-  </button>
+  <form>
+    <input #newTaskInput
+          type="text">
+    <button class="add_button"
+            (click)="add(newTaskInput.value)">
+      Add
+    </button>
+  </form>
   <tasks [tasks]="tasks"></tasks>
 </h3>

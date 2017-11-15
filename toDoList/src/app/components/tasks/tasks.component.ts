@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {TaskModel} from "../../models/task.model";
+import {TaskModel} from '../../models/task.model';
 
 @Component({
   selector: 'tasks',
@@ -10,6 +10,8 @@ import {TaskModel} from "../../models/task.model";
 export class TasksComponent {
   @Input() tasks: Array<TaskModel> = [];
 
+  editingIndex = null;
+
   toggle(index: number) {
     this.tasks[index].complete = !this.tasks[index].complete;
   }
@@ -19,24 +21,14 @@ export class TasksComponent {
   }
 
   edit(index: number, editedTask: string) {
-    this.toggle(index);
-    this.tasks[index].isEditing = true;
-    if (editedTask.localeCompare('')) {
+    if (editedTask) {
       this.tasks[index].title = editedTask;
-      this.tasks[index].isEditing = false;
+      this.editingIndex = null;
+      this.toggle(index);
     }
   }
 
-  editByEnter(event, i, editedTask) {
-    if (event.keyCode === 13) {
-      this.toggle(i);
-      this.edit(i, editedTask);
-    }
-  }
-
-  startEdit(index, isEditing) {
-    if (index % 2 === 0) {
-      isEditing = false;
-    } else { isEditing = true; }
+  startEditing(index: number) {
+    this.editingIndex = index;
   }
 }
