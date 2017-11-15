@@ -7,26 +7,5 @@
           (click)="add(newTaskInput.value)">
     Add
   </button>
-  <li *ngFor="let task of tasks; let i = index"
-      (click)="toggle(i)">
-    <span (click)="edit(i, '')"
-          [class.complete]="task.complete"
-          *ngIf="!task.isEditing; else elseBlock">
-      {{task.title}}
-    </span>
-    <ng-template #elseBlock>
-      <input #editedTask
-           (click)="toggle(i)"
-           (keypress)="editByEnter($event, i, editedTask.value)"
-           type="text"
-           value={{task.title}}>
-      <button class="edit_button" (click)="edit(i, editedTask.value)">
-        Edit
-      </button>
-    </ng-template>
-    <button class="remove_button"
-            (click)="remove(i)">
-      Remove
-    </button>
-  </li>
+  <tasks [tasks]="tasks"></tasks>
 </h3>
