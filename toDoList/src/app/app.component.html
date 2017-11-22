@@ -1,11 +1,4 @@
 <h3>
-  <form>
-    <input #newTaskInput
-          type="text">
-    <button class="add_button"
-            (click)="add(newTaskInput.value)">
-      Add
-    </button>
-  </form>
+  <addForm></addForm>
   <tasks [tasks]="tasks"></tasks>
 </h3>

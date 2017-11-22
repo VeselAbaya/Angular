@@ -3,19 +3,24 @@ import {TaskModel} from '../models/task.model';
 
 @Injectable()
 export class TaskService {
-  constructor() {}
 
-  getTasks() {
-    return [
+  private tasks: Array<TaskModel> = [];
+
+  constructor() {
+    this.tasks = [
       new TaskModel('buy milk'),
       new TaskModel('buy Bread'),
       new TaskModel('buy Gun')
     ];
   }
 
-  add(tasks: Array<TaskModel>, title: string) {
+  getTasks() {
+    return this.tasks;
+  }
+
+  addTask(title: string) {
     if (title) {
-      tasks.push(new TaskModel(title));
+      this.tasks.push(new TaskModel(title));
     }
   }
 }

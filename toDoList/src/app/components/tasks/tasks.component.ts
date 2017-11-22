@@ -24,11 +24,13 @@ export class TasksComponent {
     if (editedTask) {
       this.tasks[index].title = editedTask;
       this.editingIndex = null;
-      this.toggle(index);
     }
+
+    this.toggle(index);
   }
 
   startEditing(index: number) {
+    this.toggle(index);
     this.editingIndex = index;
   }
 }

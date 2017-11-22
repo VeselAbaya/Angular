@@ -9,7 +9,8 @@
     <form>
       <input #editedTask
             type="text"
-            value={{task.title}}>
+            value={{task.title}}
+            (click)="toggle(i)">
       <button class="edit_button" (click)="edit(i, editedTask.value)">
         Edit
       </button>
