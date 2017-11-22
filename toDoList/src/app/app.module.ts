@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { TaskService } from './services/task.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {AddFormComponent} from './components/add-form/add-form.component'; //Заимпортировал и теперь при нажатии на enter
+import {AddFormComponent} from './components/add-form/add-form.component';
+import {AddSubTaskComponent} from "./components/addSubTask-form/addSubTask-form.component"; //Заимпортировал и теперь при нажатии на enter
                                               //срабатывает add-form;
 
 @NgModule({
@@ -13,10 +14,10 @@ import {AddFormComponent} from './components/add-form/add-form.component'; //З�
     AppComponent,
     TasksComponent,
     AddFormComponent,
-    ReactiveFormsModule
+    AddSubTaskComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, ReactiveFormsModule
   ],
   providers: [TaskService],
   bootstrap: [AppComponent]

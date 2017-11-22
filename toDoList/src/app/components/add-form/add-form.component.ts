@@ -12,7 +12,7 @@ export class AddFormComponent {
   constructor(private taskService: TaskService) {}
 
   addForm: FormGroup = new FormGroup({
-    'addTask': new FormControl('Buy money', Validators.required)
+    'addTask': new FormControl('', Validators.required)
   });
 
   add(title: string) {

@@ -16,8 +16,17 @@
       </button>
     </form>
   </ng-template>
+  <button class="addSubTaskButton" (click)="startPushingSubTasks(i)">
+    Add sub-task
+  </button>
   <button class="remove_button"
           (click)="remove(i)">
     Remove
   </button>
+  <div class="subTask" *ngFor="let subTask of task.subTasks">
+    {{subTask.title}}
+  </div>
+  <div *ngIf="subTaskEditing.indexOf(i) !== -1">
+    <addSubTaskForm [taskIndex]="i" (click)="toggle(i)"></addSubTaskForm>
+  </div>
 </li>

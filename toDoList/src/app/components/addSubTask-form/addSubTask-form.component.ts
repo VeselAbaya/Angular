@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {TaskService} from '../../services/task.service';
 import {FormArray, FormGroup, FormControl} from '@angular/forms';
 
@@ -9,6 +9,8 @@ import {FormArray, FormGroup, FormControl} from '@angular/forms';
 })
 
 export class AddSubTaskComponent {
+  @Input() taskIndex: number = null;
+
   constructor(private taskService: TaskService) {}
 
   addSubTaskForm: FormGroup = new FormGroup({
@@ -16,4 +18,8 @@ export class AddSubTaskComponent {
       new FormControl()
     ])
   });
+
+  addSubTask(index: number, title: string) {
+    this.taskService.addSubTask(index, title);
+  }
 }

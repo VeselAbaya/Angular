@@ -43,3 +43,17 @@ button {
   border-radius: 5px;
 }
 
+addSubTaskForm {
+  margin-left: 25px;
+}
+
+.subTask {
+  margin-left: 25px;
+  color: lightslategrey;
+  font-size: 15px;
+}
+
+.addSubTaskButton {
+  font-size: 10px;
+}
+

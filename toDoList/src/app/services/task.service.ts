@@ -23,4 +23,8 @@ export class TaskService {
       this.tasks.push(new TaskModel(title));
     }
   }
+
+  addSubTask(index: number, title: string) {
+    this.tasks[index].subTasks.push(new TaskModel(title));
+  }
 }

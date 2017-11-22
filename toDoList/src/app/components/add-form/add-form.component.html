@@ -1,7 +1,7 @@
 <form [formGroup]="addForm">
-  <label><input #newSubTaskInput
+  <label><input #newTaskInput
          type="text"
-         [formControlName]="addTask" />
+         formControlName="addTask" />
   <button class="add_button"
           (click)="add(newTaskInput.value)">
     Add
