@@ -14,7 +14,9 @@ export class TasksComponent {
   subTaskEditing: Array<number> = [];
 
   toggle(index: number) {
-    this.tasks[index].complete = !this.tasks[index].complete;
+    if (this.tasks[index].subTasks.every((subTask: TaskModel) => subTask.complete)) {
+      this.tasks[index].complete = !this.tasks[index].complete;
+    }
   }
 
   remove(index: number) {

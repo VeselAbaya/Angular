@@ -1,9 +1,10 @@
-<form [formGroup]="addForm">
-  <label><input #newTaskInput
-         type="text"
-         formControlName="addTask" />
-  <button class="add_button"
-          (click)="add(newTaskInput.value)">
-    Add
-  </button></label>
+<form [formGroup]="addForm" (submit)="add(addForm)">
+  <label>
+    <input type="text"
+           formControlName="addTask" />
+    <button class="add_button"
+            (click)="add(addForm)">
+      Add task
+    </button>
+  </label>
 </form>

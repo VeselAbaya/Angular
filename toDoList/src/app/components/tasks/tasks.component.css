@@ -54,6 +54,22 @@ addSubTaskForm {
 }
 
 .addSubTaskButton {
-  font-size: 10px;
+  width: auto;
+  background: none;
 }
 
+tasks li {
+  font-size: 13px;
+  padding: 5px;
+  color: lightslategrey;
+  border: 1px solid lightslategrey;
+}
+
+tasks button {
+  font-size: 13px;
+  width: auto;
+}
+
+tasks .addSubTaskButton {
+  clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
+}

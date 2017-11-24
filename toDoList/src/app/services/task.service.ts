@@ -25,6 +25,8 @@ export class TaskService {
   }
 
   addSubTask(index: number, title: string) {
-    this.tasks[index].subTasks.push(new TaskModel(title));
+    if (title) {
+      this.tasks[index].subTasks.push(new TaskModel(title));
+    }
   }
 }

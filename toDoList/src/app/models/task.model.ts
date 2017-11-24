@@ -6,12 +6,12 @@ export interface ITask {
 
 export class TaskModel {
   title: string;
-  complete: boolean;
   subTasks: Array<TaskModel>;
+  complete: boolean;
 
-  constructor(title: string, complete = false) {
+  constructor(title: string) {
     this.title = title;
-    this.complete = complete;
+    this.complete = false;
     this.subTasks = [];
   }
 }

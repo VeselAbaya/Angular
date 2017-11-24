@@ -29,3 +29,7 @@ button {
 form {
   display: inline;
 }
+
+input {
+  border-radius: 5px;
+}

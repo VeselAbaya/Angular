@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {TaskService} from '../../services/task.service';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'addForm',
@@ -12,10 +12,11 @@ export class AddFormComponent {
   constructor(private taskService: TaskService) {}
 
   addForm: FormGroup = new FormGroup({
-    'addTask': new FormControl('', Validators.required)
+    addTask: new FormControl('', Validators.required)
   });
 
-  add(title: string) {
-    this.taskService.addTask(title);
+  add(formGroup: FormGroup) {
+    this.taskService.addTask(formGroup.get('addTask').value);
+    this.addForm.reset();
   }
 }
