@@ -8,9 +8,7 @@ export class TaskService {
 
   constructor() {
     this.tasks = [
-      new TaskModel('buy milk'),
-      new TaskModel('buy Bread'),
-      new TaskModel('buy Gun')
+      new TaskModel({title: 'buy milk', complete: false, subTasks: []})
     ];
   }
 
@@ -18,15 +16,15 @@ export class TaskService {
     return this.tasks;
   }
 
-  addTask(title: string) {
-    if (title) {
-      this.tasks.push(new TaskModel(title));
+  addTask(task: TaskModel) {
+    if (task.title) {
+      this.tasks.push(task);
     }
   }
 
-  addSubTask(index: number, title: string) {
-    if (title) {
-      this.tasks[index].subTasks.push(new TaskModel(title));
+  addSubTask(index: number, task: TaskModel) {
+    if (task.title) {
+      this.tasks[index].subTasks.push(task);
     }
   }
 }

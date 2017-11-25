@@ -16,7 +16,7 @@ export class TasksComponent {
   toggle(index: number) {
     if (this.tasks[index].subTasks.every((subTask: TaskModel) => subTask.complete)) {
       this.tasks[index].complete = !this.tasks[index].complete;
-    }
+    } else { this.tasks[index].complete = false; }
   }
 
   remove(index: number) {

@@ -1,17 +1,12 @@
-export interface ITask {
-  title: string;
-  complete: boolean;
-  subTasks: Array<ITask>;
-}
-
 export class TaskModel {
   title: string;
   subTasks: Array<TaskModel>;
   complete: boolean;
 
-  constructor(title: string) {
-    this.title = title;
-    this.complete = false;
-    this.subTasks = [];
+  constructor(task: TaskModel) {
+    if (task.title) { this.title = task.title; }
+    else { throw new Error('Task\'s title is bad'); }
+    this.complete = task.complete || false;
+    this.subTasks = task.subTasks || [];
   }
 }

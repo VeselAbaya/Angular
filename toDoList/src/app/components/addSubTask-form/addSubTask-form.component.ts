@@ -27,7 +27,9 @@ export class AddSubTaskComponent {
 
   addSubTask(taskIndex: number, index: number) { // index - индекс формы в subTasks
     if (this.subTasks.at(index).value) {
-      this.taskService.addSubTask(taskIndex, this.subTasks.at(index).value);
+      this.taskService.addSubTask(taskIndex, {title: this.subTasks.at(index).value,
+                                                   complete: false,
+                                                   subTasks: []});
       this.subTasks.removeAt(index);
     }
   }
