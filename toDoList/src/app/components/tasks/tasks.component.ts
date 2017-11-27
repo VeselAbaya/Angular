@@ -1,5 +1,6 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {TaskModel} from '../../models/task.model';
+import {TaskService} from '../../services/task.service';
 
 @Component({
   selector: 'tasks',
@@ -7,11 +8,21 @@ import {TaskModel} from '../../models/task.model';
   styleUrls: ['tasks.component.css']
 })
 
-export class TasksComponent {
+export class TasksComponent implements OnInit{
+  @Input() index = -1;
+
   @Input() tasks: Array<TaskModel> = [];
 
   editingIndex = null;
   subTaskEditing: Array<number> = [];
+
+  ngOnInit() {
+    if (this.index === -1 && this.tasks.length === 0) {
+      this.tasks = this.taskService.getTasks();
+    }
+  }
+
+  constructor(private taskService: TaskService) {}
 
   toggle(index: number) {
     if (this.tasks[index].subTasks.every((subTask: TaskModel) => subTask.complete)) {

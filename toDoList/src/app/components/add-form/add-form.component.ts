@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {TaskService} from '../../services/task.service';
 import {FormArray, FormControl, FormGroup, Validators} from '@angular/forms';
 import {TaskModel} from '../../models/task.model';
@@ -10,14 +10,14 @@ import {TaskModel} from '../../models/task.model';
 })
 
 export class AddFormComponent {
-  constructor(private taskService: TaskService) {}
-
-  get subTasks(): FormArray { return this.addForm.get('subTasks') as FormArray; }
-
-  addForm: FormGroup = new FormGroup({
+  @Input() addForm: FormGroup = new FormGroup({
     addTask: new FormControl('', Validators.required),
     subTasks: new FormArray([])
   });
+
+  constructor(private taskService: TaskService) {}
+
+  get subTasks(): FormArray { return this.addForm.get('subTasks') as FormArray; }
 
   add(formGroup: FormGroup) {
     const subTasksFormLenght = this.subTasks.length;

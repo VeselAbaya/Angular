@@ -1,0 +1,14 @@
+<ng-container>
+  <form>
+    <div *ngFor="let addForm of addForms">
+      <addForm [addForm]="addForm"></addForm>
+    </div>
+    <button type="text" (click)="addForm()">Add new Task</button>
+    <button class="submit-button"
+            type="text"
+            (click)="handleSubmit(addForms)">
+      Submit tasks
+    </button>
+  </form>
+  <div class="miniText"><span>*for several tasks</span></div>
+</ng-container>

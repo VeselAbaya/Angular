@@ -4,20 +4,40 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {TasksComponent } from './components/tasks/tasks.component';
 import {TaskService} from './services/task.service';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'; //Заимпортировал и теперь при нажатии на enter
+                                                                 //срабатывает add-form;
 import {AddFormComponent} from './components/add-form/add-form.component';
-import {AddSubTaskComponent} from "./components/addSubTask-form/addSubTask-form.component"; //Заимпортировал и теперь при нажатии на enter
-                                              //срабатывает add-form;
+import {AddSubTaskComponent} from './components/addSubTask-form/addSubTask-form.component';
+import {RouterModule} from '@angular/router';
+import {AddPageComponent} from './components/add-page/add-page.component';
+import {AppHeaderComponent} from './components/app-header/app-header.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     TasksComponent,
     AddFormComponent,
-    AddSubTaskComponent
+    AddSubTaskComponent,
+    AddPageComponent,
+    AppHeaderComponent
   ],
   imports: [
-    BrowserModule, FormsModule, ReactiveFormsModule
+    BrowserModule, FormsModule, ReactiveFormsModule,
+    RouterModule.forRoot([
+      {
+        path: '',
+        component: TasksComponent
+      },
+      {
+        path: 'addpage',
+        component: AddPageComponent
+      },
+      {
+        path: '**',
+        redirectTo: ''
+      }
+    ])
   ],
   providers: [TaskService],
   bootstrap: [AppComponent]

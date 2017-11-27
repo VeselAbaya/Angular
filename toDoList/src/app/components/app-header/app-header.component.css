@@ -1,0 +1,28 @@
+ul {
+  margin           : 0 auto;
+  list-style-type  : none;
+  padding          : 0;
+  overflow         : hidden;
+  background-color : darkgray;
+  display          : flex;
+  align-items      : center;
+  justify-content: space-between;
+}
+
+ul li {
+  display     : flex;
+  align-items : center;
+  height      : 100%;
+  cursor      : pointer;
+  padding     : 0 20px;
+}
+
+ul li:first-child, ul li:last-child {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+div {
+  margin-bottom: 5px;
+}
+

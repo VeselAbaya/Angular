@@ -11,7 +11,8 @@
   <button type="text" (click)="addSubTaskForm()">
     Add sub-task
   </button>
-  <div *ngFor="let subTaskFrom of subTasks.controls; let i = index">
+  <div class="subTasks"
+       *ngFor="let subTaskFrom of subTasks.controls; let i = index">
     <label formArrayName="subTasks">
       <input type="text" formControlName="{{i}}"/>
       <!--<span [hidden]="!subTaskFrom.controls.i.hasError('required')">Field is required!</span>-->
