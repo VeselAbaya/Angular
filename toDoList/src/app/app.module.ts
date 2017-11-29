@@ -11,6 +11,7 @@ import {AddSubTaskComponent} from './components/addSubTask-form/addSubTask-form.
 import {RouterModule} from '@angular/router';
 import {AddPageComponent} from './components/add-page/add-page.component';
 import {AppHeaderComponent} from './components/app-header/app-header.component';
+import {AuthGuard} from "./services/auth.guard";
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import {AppHeaderComponent} from './components/app-header/app-header.component';
       },
       {
         path: 'addpage',
-        component: AddPageComponent
+        component: AddPageComponent,
+        canDeactivate: [AuthGuard]
       },
       {
         path: '**',
@@ -39,7 +41,7 @@ import {AppHeaderComponent} from './components/app-header/app-header.component';
       }
     ])
   ],
-  providers: [TaskService],
+  providers: [TaskService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -12,6 +12,7 @@ import {TaskModel} from '../../models/task.model';
 
 export class AddPageComponent {
   addForms: Array<FormGroup> = [];
+  submitted = true;
 
   constructor(private taskService: TaskService) {}
 
@@ -20,6 +21,8 @@ export class AddPageComponent {
       addTask: new FormControl('', Validators.required),
       subTasks: new FormArray([])
     }));
+
+    this.submitted = false;
   }
 
   handleSubmit(formGroups: Array<FormGroup>) {
@@ -31,13 +34,27 @@ export class AddPageComponent {
                                              subTasks: []});
 
       for (let i = 0; i !== subTasksFormLenght; ++i) {
-        task.subTasks[i] = new TaskModel({title: (formGroup.get('subTasks') as FormArray).at(i).value,
-                                          complete: false,
-                                          subTasks: []});
+        if ((formGroup.get('subTasks') as FormArray).at(i).value) {
+          task.subTasks.push(new TaskModel({
+            title: (formGroup.get('subTasks') as FormArray).at(i).value,
+            complete: false,
+            subTasks: []
+          }));
+        }
       }
 
       this.taskService.addTask(task);
       formGroup.reset();
     }
+
+    this.submitted = true;
+  }
+
+  isEmpty(): boolean {
+    for (const formGroup of this.addForms) {
+      if (formGroup.get('addTask').value) { return false; }
+    }
+
+    return true;
   }
 }

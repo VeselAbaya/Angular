@@ -16,13 +16,11 @@ export class AddSubTaskComponent {
   get subTasks(): FormArray { return this.addSubTaskForm.get('subTasks') as FormArray; }
 
   addSubTaskForm: FormGroup = new FormGroup({
-    'subTasks': new FormArray([
-      new FormControl('', Validators.required)
-    ])
+    'subTasks': new FormArray([])
   });
 
   addForm() {
-    this.subTasks.push(new FormControl('', Validators.required));
+    this.subTasks.push(new FormControl(''));
   }
 
   addSubTask(taskIndex: number, index: number) { // index - индекс формы в subTasks
@@ -30,7 +28,8 @@ export class AddSubTaskComponent {
       this.taskService.addSubTask(taskIndex, {title: this.subTasks.at(index).value,
                                                    complete: false,
                                                    subTasks: []});
-      this.subTasks.removeAt(index);
     }
+
+    this.subTasks.removeAt(index);
   }
 }

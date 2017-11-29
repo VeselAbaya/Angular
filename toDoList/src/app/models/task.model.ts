@@ -4,8 +4,7 @@ export class TaskModel {
   complete: boolean;
 
   constructor(task: TaskModel) {
-    if (task.title) { this.title = task.title; }
-    else { throw new Error('Task\'s title is bad'); }
+    this.title = task.title;
     this.complete = task.complete || false;
     this.subTasks = task.subTasks || [];
   }

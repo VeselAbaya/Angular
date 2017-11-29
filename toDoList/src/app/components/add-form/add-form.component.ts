@@ -27,19 +27,19 @@ export class AddFormComponent {
                                            subTasks: []});
 
     for (let i = 0; i !== subTasksFormLenght; ++i) {
-      console.log(this.subTasks.at(i).value);
-      task.subTasks[i] = new TaskModel({title: this.subTasks.at(i).value,
-                                        complete: false,
-                                        subTasks: []});
+      if (this.subTasks.at(i).value) {
+        task.subTasks.push(new TaskModel({title: this.subTasks.at(i).value,
+                                          complete: false,
+                                          subTasks: []}));
+      }
     }
 
     this.taskService.addTask(task);
-
     this.addForm.reset();
   }
 
   addSubTaskForm() {
-    this.subTasks.push(new FormControl('', Validators.required));
+    this.subTasks.push(new FormControl(''));
   }
 
   removeSubTaskForm(index: number) {

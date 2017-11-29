@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {TaskModel} from '../../models/task.model';
 import {TaskService} from '../../services/task.service';
+import {AddSubTaskComponent} from "../addSubTask-form/addSubTask-form.component";
 
 @Component({
   selector: 'tasks',
@@ -15,6 +16,7 @@ export class TasksComponent implements OnInit{
 
   editingIndex = null;
   subTaskEditing: Array<number> = [];
+  addSubTaskComponent: AddSubTaskComponent;
 
   ngOnInit() {
     if (this.index === -1 && this.tasks.length === 0) {
@@ -43,8 +45,9 @@ export class TasksComponent implements OnInit{
     this.toggle(index);
   }
 
-  startPushingSubTasks(index: number) {
+  startPushingSubTasks(index) {
     this.toggle(index);
+
     if (this.subTaskEditing.indexOf(index) !== -1) {
       this.subTaskEditing.splice(this.subTaskEditing.indexOf(index), 1);
     } else { this.subTaskEditing.push(index); }
