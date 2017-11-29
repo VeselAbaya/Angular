@@ -23,10 +23,10 @@
           (click)="remove(i)">
     Remove
   </button>
-  <tasks [tasks]="task.subTasks"
-         [index]="i"
-         (click)="toggle(i)"></tasks>
   <div *ngIf="subTaskEditing.indexOf(i) !== -1">
+    <tasks [tasks]="task.subTasks"
+           [index]="i"
+           (click)="toggle(i)"></tasks>
     <addSubTaskForm [taskIndex]="i" (click)="toggle(i)"></addSubTaskForm>
   </div>
 </li>
