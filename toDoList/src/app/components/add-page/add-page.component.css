@@ -25,3 +25,7 @@ div span {
   text-align: center;
   padding-right: 8px;
 }
+
+.add_button {
+  opacity: 0;
+}
