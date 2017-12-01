@@ -21,3 +21,7 @@ span {
 .subTasks {
   margin-left: 25px;
 }
+
+.invalid {
+  opacity: .5;
+}

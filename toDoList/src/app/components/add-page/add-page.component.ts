@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {FormArray, FormControl, FormGroup, Validators} from '@angular/forms';
 import {TaskService} from '../../services/task.service';
-import {AddFormComponent} from '../add-form/add-form.component';
 import {TaskModel} from '../../models/task.model';
 
 @Component({

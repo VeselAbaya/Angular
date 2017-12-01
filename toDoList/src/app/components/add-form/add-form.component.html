@@ -1,9 +1,11 @@
-<form [formGroup]="addForm" onsubmit="add(addForm)">
+<form [formGroup]="addForm" (submit)="add(addForm)">
   <label>
     <input type="text"
            formControlName="addTask" />
     <span [hidden]="!addForm.controls.addTask.hasError('required')">Field is required!</span>
     <button class="add_button"
+            [class.invalid]="addForm.controls.addTask.hasError('required')"
+            [disabled]="addForm.controls.addTask.hasError('required')"
             (click)="add(addForm)">
       Add task
     </button>

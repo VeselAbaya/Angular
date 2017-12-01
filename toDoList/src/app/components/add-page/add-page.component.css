@@ -29,3 +29,7 @@ div span {
 .add_button {
   opacity: 0;
 }
+
+addForm .add_button {
+  clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
+}
