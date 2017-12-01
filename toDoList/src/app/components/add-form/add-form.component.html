@@ -2,7 +2,11 @@
   <label>
     <input type="text"
            formControlName="addTask" />
-    <span [hidden]="!addForm.controls.addTask.hasError('required')">Field is required!</span>
+
+    <span [hidden]="!addForm.controls.addTask.hasError('required')">
+      Field is required!
+    </span>
+
     <button class="add_button"
             [class.invalid]="addForm.controls.addTask.hasError('required')"
             [disabled]="addForm.controls.addTask.hasError('required')"
