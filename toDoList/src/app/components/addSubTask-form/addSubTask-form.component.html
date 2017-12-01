@@ -1,14 +1,15 @@
 <form [formGroup]="addSubTaskForm" (submit)="add(addSubTaskForm)">
   <div formArrayName="subTasks">
     <div *ngFor="let subTask of subTasks.controls; let i = index">
-      <input type="text"
-             formControlName="{{i}}">
+      <input type="text" formControlName="{{i}}">
+
       <button class="add_button"
               (click)="addSubTask(taskIndex, i)">
         Add
       </button>
     </div>
   </div>
+
   <div>
     <button type="button"
             (click)="addForm()">
