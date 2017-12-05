@@ -11,7 +11,8 @@ import {AddSubTaskComponent} from './components/addSubTask-form/addSubTask-form.
 import {RouterModule} from '@angular/router';
 import {AddPageComponent} from './components/add-page/add-page.component';
 import {AppHeaderComponent} from './components/app-header/app-header.component';
-import {AuthGuard} from "./services/auth.guard";
+import {AuthGuard} from './services/auth.guard';
+import {TooltipDirective} from './directives/tooltip.directive';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {AuthGuard} from "./services/auth.guard";
     AddFormComponent,
     AddSubTaskComponent,
     AddPageComponent,
-    AppHeaderComponent
+    AppHeaderComponent,
+    TooltipDirective
   ],
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule,

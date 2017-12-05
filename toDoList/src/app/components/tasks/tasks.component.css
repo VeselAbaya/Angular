@@ -6,10 +6,13 @@ li {
   margin-top: 3px;
   border: 2px solid grey;
   border-radius: 5px;
+  background: white;
+  transition: background-color 0.3s;
 }
 
 li:hover {
-  background-color: gainsboro;
+  background: gainsboro;
+  transition: background-color 0.3s;
 }
 
 ul {
@@ -64,6 +67,8 @@ tasks li {
   padding: 5px;
   color: lightslategrey;
   border: 1px solid lightslategrey;
+  background: white;
+  transition: background-color 0.3s;
 }
 
 tasks button {
@@ -75,6 +80,7 @@ tasks .addSubTaskButton {
   clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
 }
 
-tasks:hover {
-  background-color: lightslategrey;
+tasks li:hover {
+  background-color: gainsboro;
+  transition: backfround-color 0.3s;
 }

@@ -1,5 +1,7 @@
 <li *ngFor="let task of tasks; let i = index"
     (click)="toggle(i)">
+  <div class="sibling"></div>
+
   <span [class.complete]="task.complete"
         (click)="startEditing(i)"
         *ngIf="!(i === editingIndex); else elseBlock">
@@ -13,7 +15,7 @@
             value={{task.title}}
             (click)="toggle(i)">
 
-      <button class="edit_button" (click)="edit(i, editedTask.value)">
+      <button appTooltip="qwerty" class="edit_button" (click)="edit(i, editedTask.value)">
         Edit
       </button>
     </form>
@@ -24,7 +26,7 @@
   </button>
 
   <button class="remove_button"
-          (click)="remove(i)">
+          (click)="remove(i)" #adc>
     Remove
   </button>
 

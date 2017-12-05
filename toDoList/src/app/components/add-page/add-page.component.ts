@@ -26,13 +26,13 @@ export class AddPageComponent {
 
   handleSubmit(formGroups: Array<FormGroup>) {
     for (const formGroup of formGroups) {
-      const subTasksFormLenght = (formGroup.get('subTasks') as FormArray).length;
+      const subTasksFormLength = (formGroup.get('subTasks') as FormArray).length;
 
       const task: TaskModel = new TaskModel({title: formGroup.get('addTask').value,
                                              complete: false,
                                              subTasks: []});
 
-      for (let i = 0; i !== subTasksFormLenght; ++i) {
+      for (let i = 0; i !== subTasksFormLength; ++i) {
         if ((formGroup.get('subTasks') as FormArray).at(i).value) {
           task.subTasks.push(new TaskModel({
             title: (formGroup.get('subTasks') as FormArray).at(i).value,

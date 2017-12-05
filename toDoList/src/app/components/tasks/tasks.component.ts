@@ -16,7 +16,6 @@ export class TasksComponent implements OnInit{
 
   editingIndex = null;
   subTaskEditing: Array<number> = [];
-  addSubTaskComponent: AddSubTaskComponent;
 
   ngOnInit() {
     if (this.index === -1 && this.tasks.length === 0) {
