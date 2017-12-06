@@ -1,3 +1,6 @@
+@import 'app/directives/tooltip.directives.css';
+
 button:hover {
   cursor: pointer;
 }
+

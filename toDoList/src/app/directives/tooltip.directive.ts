@@ -2,11 +2,12 @@ import {Directive, HostListener} from '@angular/core';
 import {ElementRef, Input, Renderer} from '@angular/core';
 
 @Directive({
-  selector: '[appTooltip]',
+  selector: '[app-tooltip]',
 })
 
 export class TooltipDirective {
-  @Input('appTooltip') text: string;
+  // @Input() text: string; // <-- ? Почему-то не хочет считывать строку ?
+  @Input('app-tooltip-font-size') fontSize: string;
 
   private span: HTMLElement;
   private element: HTMLElement;
@@ -15,25 +16,27 @@ export class TooltipDirective {
   constructor(el: ElementRef, private render: Renderer) {
     this.element = el.nativeElement;
     this.HTML = this.element.innerHTML;
-    this.span = document.createElement('span');
-    this.span.innerHTML = this.text;
-  }
 
-  @HostListener('mouseenter')
-  onMouseEnter() {
-    this.element.appendChild(this.span);
+    this.span = document.createElement('span');
+    this.span.innerHTML = this.element.getAttribute('app-tooltip');
+
     this.render.setElementClass(this.element, 'tooltip', true);
     this.render.setElementClass(this.element, 'tooltip:hover', true);
     this.render.setElementClass(this.span, 'tooltipText', true);
     this.render.setElementClass(this.span, 'tooltipText::after', true);
+
+    this.render.setElementStyle(this.span, 'font-size', this.element.getAttribute('app-tooltip-font-size') || '10px');
+
+    this.element.appendChild(this.span);
+  }
+
+  @HostListener('mouseenter')
+  onMouseEnter() {
+    this.render.setElementStyle(this.span, 'opacity', '1');
   }
 
   @HostListener('mouseleave')
   onMouseLeave() {
-    this.element.removeChild(this.span);
-    this.render.setElementClass(this.element, 'tooltip', false);
-    this.render.setElementClass(this.element, 'tooltip:hover', false);
-    this.render.setElementClass(this.span, 'tooltipText', false);
-    this.render.setElementClass(this.span, 'tooltipText::after', false);
+    this.render.setElementStyle(this.span, 'opacity', '0');
   }
 }
