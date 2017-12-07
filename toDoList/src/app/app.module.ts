@@ -11,8 +11,9 @@ import {AddSubTaskComponent} from './components/addSubTask-form/addSubTask-form.
 import {RouterModule} from '@angular/router';
 import {AddPageComponent} from './components/add-page/add-page.component';
 import {AppHeaderComponent} from './components/app-header/app-header.component';
-import {AuthGuard} from './services/auth.guard';
-import {TooltipDirective} from './directives/tooltip.directive';
+import {ConfirmGuard} from './services/confirm.guard';
+import {TooltipDirective} from './directives/tooltip/tooltip.directive';
+import {TimeoutDirective} from './directives/timeout/timeout.directive';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {TooltipDirective} from './directives/tooltip.directive';
     AddSubTaskComponent,
     AddPageComponent,
     AppHeaderComponent,
-    TooltipDirective
+    TooltipDirective,
+    TimeoutDirective
   ],
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule,
@@ -35,7 +37,7 @@ import {TooltipDirective} from './directives/tooltip.directive';
       {
         path: 'addpage',
         component: AddPageComponent,
-        canDeactivate: [AuthGuard]
+        canDeactivate: [ConfirmGuard]
       },
       {
         path: '**',
@@ -43,7 +45,7 @@ import {TooltipDirective} from './directives/tooltip.directive';
       }
     ])
   ],
-  providers: [TaskService, AuthGuard],
+  providers: [TaskService, ConfirmGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

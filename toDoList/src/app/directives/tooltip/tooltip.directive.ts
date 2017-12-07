@@ -7,7 +7,7 @@ import {ElementRef, Input, Renderer} from '@angular/core';
 
 export class TooltipDirective {
   // @Input() text: string; // <-- ? Почему-то не хочет считывать строку ?
-  @Input('app-tooltip-font-size') fontSize: string;
+  // @Input('app-tooltip-font-size') fontSize: string; <-- ? Аналогично во всех директивах ничего не считывается ?
 
   private span: HTMLElement;
   private element: HTMLElement;
