@@ -1,8 +1,10 @@
-<div app-timeout="5000" app-timeout-routelink="addpage">
+<div>
+  <h1 style="text-align: center">ToDo list</h1>
+  <hr>
+</div>
+<div>
   <ul>
-    <li [routerLink]="''" app-tooltip="To see all tasks">Your tasks</li> <!--Что сделать со стилями
-                                                                             чтобы тултип нормально отображался?
-                                                                             Его закрывает <hr> из index.html-->
+    <li [routerLink]="''" app-tooltip="To see all tasks">Your tasks</li>
     <li [routerLink]="'/addpage'">Add tasks</li>
   </ul>
 </div>

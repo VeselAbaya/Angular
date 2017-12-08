@@ -7,20 +7,25 @@ import {Router} from '@angular/router';
 
 export class TimeoutDirective {
   // @Input('app-timeout') timeout = 60000;
-  // @Input('app-timeout-routelink') route: string;
+  @Input('app-timeout-routelink') route: string;
 
   private element: HTMLElement;
+  private timeoutId = 0;
 
   constructor(private el: ElementRef, private router: Router) {
     this.element = el.nativeElement;
   }
 
-  private timeoutId: number = setTimeout(() => {
+  @HostListener('click')
+  onClick() {
+    clearTimeout(this.timeoutId);
+    this.timeoutId = setTimeout(() => {
       this.router.navigate([this.element.getAttribute('app-timeout-routelink') || '']);
-      }, this.element.getAttribute('app-timeout') || 5000);
+    }, this.element.getAttribute('app-timeout') || 5000);
+  }
 
-  @HostListener('mousemove')
-  onMouseMove() {
+  @HostListener('keypress')
+  onKeyPress() {
     clearTimeout(this.timeoutId);
     this.timeoutId = setTimeout(() => {
       this.router.navigate([this.element.getAttribute('app-timeout-routelink') || '']);
