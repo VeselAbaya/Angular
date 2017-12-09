@@ -1,6 +1,0 @@
-@import 'app/directives/tooltip/tooltip.directives.css';
-
-button:hover {
-  cursor: pointer;
-}
-

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e993cae9-8054-4f4e-b384-cff2c8b2f213" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/dist/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/app/components/app-header/add-header.component.css" />
+        <option value="$PROJECT_DIR$/src/app/components/app-header/add-header.component.html" />
+        <option value="$PROJECT_DIR$/src/app/components/app-header/add-header.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/add-pape/add-page.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/add-pape/add-page.component.html" />
+        <option value="$PROJECT_DIR$/src/app/components/add-pape/add-page.component.css" />
+        <option value="$PROJECT_DIR$/src/app/services/auth.guard.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/addSubTask-form/addSubTask-form.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/models/task.model.ts" />
+        <option value="$PROJECT_DIR$/src/app/services/sub-task-form.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/add-form/add-form.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/addSubTask-form/addSubTask-form.component.html" />
+        <option value="$PROJECT_DIR$/src/app/components/add-form/add-form.component.html" />
+        <option value="$PROJECT_DIR$/src/app/components/tasks/tasks.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/add-page/add-page.component.ts" />
+        <option value="$PROJECT_DIR$/src/directives/tooltip.directives.css" />
+        <option value="$PROJECT_DIR$/src/directives/tooltip.directive.ts" />
+        <option value="$PROJECT_DIR$/src/app/directives/tooltip.directive.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/add-page/add-page.component.html" />
+        <option value="$PROJECT_DIR$/src/app/directives/tooltip.directives.css" />
+        <option value="$PROJECT_DIR$/src/app/services/confirm.guard.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/app/components/app-header/app-header.component.css" />
+        <option value="$PROJECT_DIR$/src/app/directives/tooltip/tooltip.directive.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/app-header/app-header.component.html" />
+        <option value="$PROJECT_DIR$/src/app/directives/timeout/timeout.directive.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/src/app/components/tasks/tasks.component.html" />
+        <option value="$PROJECT_DIR$/src/app/app.component.css" />
+        <option value="$PROJECT_DIR$/src/styles.css" />
+        <option value="$PROJECT_DIR$/src/app/components/add-form/add-form.component.css" />
+        <option value="$PROJECT_DIR$/src/app/components/add-page/add-page.component.css" />
+        <option value="$PROJECT_DIR$/src/app/components/addSubTask-form/addSubTask-form.component.css" />
+        <option value="$PROJECT_DIR$/src/app/components/tasks/tasks.component.css" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="89" />
+    <option name="y" value="33" />
+    <option name="width" value="916" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="toDoList" type="b2602c69:ProjectViewProjectNode" />
+              <item name="toDoList" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="toDoList" type="b2602c69:ProjectViewProjectNode" />
+              <item name="toDoList" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="toDoList" type="b2602c69:ProjectViewProjectNode" />
+              <item name="toDoList" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="toDoList" type="b2602c69:ProjectViewProjectNode" />
+              <item name="toDoList" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="toDoList" type="b2602c69:ProjectViewProjectNode" />
+              <item name="toDoList" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="add-form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="toDoList" type="b2602c69:ProjectViewProjectNode" />
+              <item name="toDoList" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="add-page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="toDoList" type="b2602c69:ProjectViewProjectNode" />
+              <item name="toDoList" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="addSubTask-form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="toDoList" type="b2602c69:ProjectViewProjectNode" />
+              <item name="toDoList" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="app-header" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="toDoList" type="b2602c69:ProjectViewProjectNode" />
+              <item name="toDoList" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="toDoList" type="b2602c69:ProjectViewProjectNode" />
+              <item name="toDoList" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.tslint" value="$PROJECT_DIR$/node_modules/tslint" />
+    <property name="typescript-compiler-editor-notification" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ToDoList/application" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/directives/tooltip" />
+      <recent name="$PROJECT_DIR$/src/app" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="npm.toDoList">
+    <configuration name="toDoList" type="js.build_tools.npm" factoryName="npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e993cae9-8054-4f4e-b384-cff2c8b2f213" name="Default" comment="" />
+      <created>1511765753176</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1511765753176</updated>
+      <workItem from="1511765757721" duration="4422000" />
+      <workItem from="1511783329570" duration="1637000" />
+      <workItem from="1511793780216" duration="11936000" />
+      <workItem from="1511970621910" duration="8887000" />
+      <workItem from="1512024299120" duration="1584000" />
+      <workItem from="1512033422226" duration="829000" />
+      <workItem from="1512066281302" duration="3999000" />
+      <workItem from="1512150318821" duration="2006000" />
+      <workItem from="1512154624682" duration="27000" />
+      <workItem from="1512154668554" duration="603000" />
+      <workItem from="1512157306785" duration="1645000" />
+      <workItem from="1512197451211" duration="844000" />
+      <workItem from="1512417589833" duration="69000" />
+      <workItem from="1512418606309" duration="1699000" />
+      <workItem from="1512487873730" duration="2130000" />
+      <workItem from="1512498341031" duration="465000" />
+      <workItem from="1512578079042" duration="1312000" />
+      <workItem from="1512675783560" duration="3146000" />
+      <workItem from="1512672124644" duration="4280000" />
+      <workItem from="1512710582469" duration="2979000" />
+      <workItem from="1512731836413" duration="1305000" />
+      <workItem from="1512734308122" duration="391000" />
+      <workItem from="1512749297422" duration="1790000" />
+      <workItem from="1512754515005" duration="713000" />
+      <workItem from="1512802342605" duration="169000" />
+      <workItem from="1512808002427" duration="1473000" />
+      <workItem from="1512809741740" duration="23000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="60363000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="89" y="33" width="1833" height="1083" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22444445" sideWeight="0.4916759" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36027715" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34295613" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32" sideWeight="0.5083241" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290993" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32" sideWeight="0.5083241" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36027715" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34295613" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290993" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25944445" sideWeight="0.4916759" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/app/components/tasks/tasks.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/add-page/add-page.component.css" />
+    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/add-page/add-page.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/add-page/add-page.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/app-header/app-header.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/app-header/app-header.component.css" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/tasks/tasks.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/add-form/add-form.component.css" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/add-page/add-page.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/tasks/tasks.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/add-page/add-page.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/tasks/tasks.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/add-form/add-form.component.css" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/add-page/add-page.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/add-form/add-form.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/tasks/tasks.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/polyfills.ts" />
+    <entry file="file://$PROJECT_DIR$/tslint.json" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/app-header/app-header.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/models/task.model.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/services/sub-task-form.service.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/addSubTask-form/addSubTask-form.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/add-form/add-form.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/add-form/add-form.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/services/task.service.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/tasks/tasks.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/addSubTask-form/addSubTask-form.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/add-page/add-page.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/add-page/add-page.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/services/confirm.guard.ts" />
+    <entry file="file://$PROJECT_DIR$/src/index.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/directives/tooltip/tooltip.directives.css" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/app-header/app-header.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/directives/tooltip/tooltip.directive.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/directives/timeout/timeout.directive.ts" />
+    <entry file="file://$PROJECT_DIR$/src/img/remove_icon.ico" />
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/tasks/tasks.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.css" />
+    <entry file="file://$PROJECT_DIR$/src/styles.css" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/add-form/add-form.component.css" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/add-page/add-page.component.css" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/addSubTask-form/addSubTask-form.component.css" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/app-header/app-header.component.css" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/tasks/tasks.component.css" />
+  </component>
+</project>
