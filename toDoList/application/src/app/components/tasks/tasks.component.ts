@@ -35,7 +35,7 @@ export class TasksComponent implements OnInit{
   }
 
   remove(id: number) {
-    this.taskService.remove(id);
+    this.taskService.remove(id); // <--------- При нажатии на кнопку remove кидается ошибка ?QUESTION?
   }
 
   edit(index: number, editedTask: string) {
