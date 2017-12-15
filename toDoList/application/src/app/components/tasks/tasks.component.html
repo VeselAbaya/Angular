@@ -26,7 +26,7 @@
   </button>
 
   <button class="remove_button"
-          (click)="remove(i)">
+          (click)="remove(task.id)">
     Remove
   </button>
 
@@ -34,6 +34,6 @@
     <tasks [tasks]="task.subTasks"
            [index]="i"
            (click)="toggle(i)"></tasks>
-    <addSubTaskForm [taskIndex]="i" (click)="toggle(i)"></addSubTaskForm>
+    <addSubTaskForm [taskId]="task.id" (click)="toggle(i)"></addSubTaskForm>
   </div>
 </li>

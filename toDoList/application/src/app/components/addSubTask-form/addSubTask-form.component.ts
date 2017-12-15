@@ -9,7 +9,7 @@ import {FormArray, FormGroup, FormControl, Validators} from '@angular/forms';
 })
 
 export class AddSubTaskComponent {
-  @Input() taskIndex: number = null;
+  @Input() taskId: number = null;
 
   constructor(private taskService: TaskService) {}
 
@@ -23,12 +23,12 @@ export class AddSubTaskComponent {
     this.subTasks.push(new FormControl(''));
   }
 
-  addSubTask(taskIndex: number, index: number) { // index - индекс формы в subTasks
-    if (this.subTasks.at(index).value) {
-      this.taskService.addSubTask(taskIndex, {title: this.subTasks.at(index).value,
+  addSubTask(taskId: number, form_index: number) { // form_index - индекс формы в subTasks
+    if (this.subTasks.at(form_index).value) {
+      this.taskService.addSubTask(taskId, {title: this.subTasks.at(form_index).value,
                                                      complete: false});
     }
 
-    this.subTasks.removeAt(index);
+    this.subTasks.removeAt(form_index);
   }
 }

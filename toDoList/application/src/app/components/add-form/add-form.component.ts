@@ -20,6 +20,7 @@ export class AddFormComponent {
   get subTasks(): FormArray { return this.addForm.get('subTasks') as FormArray; }
 
   add(formGroup: FormGroup) {
+    console.log(this.taskService.newId());
     const subTasksFormLenght = this.subTasks.length;
 
     const task: TaskModel = new TaskModel({id: this.taskService.newId(),

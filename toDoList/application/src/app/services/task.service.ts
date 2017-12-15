@@ -19,11 +19,11 @@ export class TaskService {
   //   return this.tasks;
   // }
 
-  getTasks()/*: Promise<Array<TaskModel>>*/ {
+  getTasks(): Promise<Array<TaskModel>> {
     return this.httpClient.get('api/todos')
       .toPromise()
       .then((res) => {
-        this.id = res.lenght;
+        this.id = res.length;
         return res.map((item) => new TaskModel(item));
       });
   }
@@ -32,7 +32,7 @@ export class TaskService {
   //   if (task.title) {
   //     this.tasks.push(task);
   //   }
-  // }
+  // }  2i` qi
 
   addTask(task: TaskModel): Promise<any> {
     return this.httpClient.post('api/todos', JSON.stringify(task),
@@ -40,21 +40,27 @@ export class TaskService {
       .toPromise();
   }
 
-  edit(index: number, task: TaskModel) {
-    return this.httpClient.put('api/tasks/?id=0', JSON.stringify(task),
+  edit(id: number, task: TaskModel) {
+    return this.httpClient.put('api/todos/?id=0', JSON.stringify(task),
                                { headers: this.getJsonHeaders() })
       .toPromise();
   }
 
-    addSubTask(index: number, subTask: SubTask): Promise<any> {
-    const url = 'api/tasks/?id=' + index.toString();
-    return this.httpClient.post(url, JSON.stringify(subTask),
+  addSubTask(id: number, subTask: SubTask): Promise<any> {
+    const url = 'api/todos?id=' + id.toString();
+    return this.httpClient.put(url, JSON.stringify(subTask),
                                 { headers: this.getJsonHeaders() })
       .toPromise();
   }
 
   newId(): number {
-    return this.id++;
+    return ++this.id;
+  }
+
+  remove(id: number): Promise<any> {
+    return this.httpClient.delete('api/todos/?id=1',
+                                  { headers: this.getJsonHeaders() })
+      .toPromise();
   }
 
   private getJsonHeaders(): HttpHeaders {

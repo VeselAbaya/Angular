@@ -34,8 +34,8 @@ export class TasksComponent implements OnInit{
     } else { this.tasks[index].complete = false; }
   }
 
-  remove(index: number) {
-    this.tasks.splice(index, 1);
+  remove(id: number) {
+    this.taskService.remove(id);
   }
 
   edit(index: number, editedTask: string) {
