@@ -1,0 +1,24 @@
+<div class="block__menu">
+  <ul class="menu">
+    <li>Sort by...
+      <ul class="submenu" style="width: 77.61px;">
+        <li>name</li>
+        <li>date</li>
+        <li>format</li>
+      </ul>
+    </li>
+    <li>Show only...
+      <ul class="submenu" style="width: 99.83px;">
+        <li>.jpg</li>
+        <li>.jpeg</li>  <!--Here will be ng-for-->
+        <li>.png</li>
+        <li>.bmp</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<div class="Images">
+  <img *ngFor="let image of images"
+       src="{{image.src}}"/>
+</div>

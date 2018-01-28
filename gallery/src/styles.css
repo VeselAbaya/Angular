@@ -1,0 +1,5 @@
+body {
+  background: url(../server/img/background.jpg) no-repeat center top / cover;
+  margin-top: 0;
+  height: 100vh;
+}
