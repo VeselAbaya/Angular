@@ -7,6 +7,7 @@ import {RouterModule} from "@angular/router";
 import {ImagesComponent} from "./components/images/images.component";
 import {ImagesService} from "./services/images.service";
 import {HttpClientModule} from "@angular/common/http";
+import {CommonModule} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     BrowserModule,
     HttpClientModule,
+    CommonModule,
     RouterModule.forRoot([
       {
         path: '',
