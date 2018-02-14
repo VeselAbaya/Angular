@@ -12,6 +12,7 @@ export class ImagesService {
     return this.httpClient.get('api/images')
       .toPromise()
       .then((res) => {
+        // console.log(res);
         this.id = res.length;
         return res.map((item) => new ImageModel(item));
       });

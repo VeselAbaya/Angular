@@ -1,3 +1,7 @@
+button {
+  outline: none;
+}
+
 .top {
   display: flex;
   justify-content: space-between;
@@ -5,12 +9,12 @@
 
 .top__left_part {
   color: #ae84ac;
-  font-family: Arial;
+  font-family: SansSerif;
   opacity: 0.5
 }
 
 .too__right_part {
-  font-family: Arial;
+  font-family: SansSerif;
 }
 
 .download_button {
@@ -24,7 +28,7 @@
   display: inline;
   margin-top: 0;
   color: #ae84ac;
-  font-family: Arial;
+  font-family: SansSerif;
   font-size: medium;
   opacity: 0.5
 }
@@ -33,7 +37,8 @@
   color: #ae84ac;
   display: flex;
   justify-content: center;
-  font-family: Arial;
+  font-family: SansSerif;
   opacity: 0.5;
+  font-style: italic;
 }
 

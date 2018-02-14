@@ -1,24 +1,101 @@
-<div class="block__menu">
+<div class="block__menu" xmlns="http://www.w3.org/1999/html">
   <ul class="menu">
     <li>Sort by...
-      <ul class="submenu" style="width: 77.61px;">
-        <li>name</li>
-        <li>date</li>
-        <li>format</li>
+      <ul class="submenu" style="width: 77.6px;">
+        <li>
+          <button class="submenu-button"
+                  [class.checked]="this.sorting_button_checked == 'name'"
+                  (click)="this.sorting('name')">
+            name
+          </button>
+        </li>
+
+        <li>
+          <button class="submenu-button"
+                  [class.checked]="this.sorting_button_checked == 'date'"
+                  (click)="this.sorting('date')">
+            date
+          </button>
+        </li>
+
+        <li>
+          <button class="submenu-button"
+                  [class.checked]="this.sorting_button_checked == 'format'"
+                  (click)="this.sorting('format')">
+            format
+          </button>
+        </li>
       </ul>
     </li>
+
     <li>Show only...
-      <ul class="submenu" style="width: 99.83px;">
-        <li>.jpg</li>
-        <li>.jpeg</li>  <!--Here will be ng-for-->
-        <li>.png</li>
-        <li>.bmp</li>
+      <ul class="submenu" style="width: 99.81px;">
+        <li *ngFor="let format of this.formats">
+          <button class="submenu-button"
+                  [class.checked]="this.showonly_button_checked == format"
+                  (click)="this.show_only(format)">
+            {{format}}
+          </button>
+        </li>
       </ul>
+    </li>
+
+    <li class="slidermode-li">
+      <button class="submenu-button slidermode-button"
+              (click)="slidermode_toggle()"
+              [class.checked]="this.slidermode_on">
+        Slideshow
+      </button>
+    </li>
+
+    <li class="upload-form">
+      <div class="cool-border">
+        <app-add-form></app-add-form>
+      </div>
+    </li>
+
+    <li class="clear-button">
+      <button class="submenu-button"
+              (click)="remove_filters()"
+              app-tooltip="Removes filters"
+              app-tooltip-font-size="7px">
+        Ø
+      </button>
     </li>
   </ul>
 </div>
 
-<div class="Images">
-  <img *ngFor="let image of images"
-       src="{{image.src}}"/>
+
+<div id="carousel-example-generic"
+     class="carousel slide"
+     data-ride="carousel"
+     *ngIf="this.slidermode_on; else elseBlock">
+  <p style="color: red">Doesn't work yet</p>
+  <!--&lt;!&ndash; Wrapper for slides &ndash;&gt;-->
+  <!--<div class="carousel-inner" role="listbox">-->
+    <!--<div class="item active">-->
+      <!--<img src="{{visible_images[0].src}}">-->
+    <!--</div>-->
+    <!--<div *ngFor="let image of visible_images.slice(1)"-->
+         <!--class="item">-->
+      <!--<img src="{{image.src}}">-->
+    <!--</div>-->
+  <!--</div>-->
+
+  <!--&lt;!&ndash; Controls &ndash;&gt;-->
+  <!--<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">-->
+    <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+    <!--<span class="sr-only">Previous</span>-->
+  <!--</a>-->
+  <!--<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">-->
+    <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+    <!--<span class="sr-only">Next</span>-->
+  <!--</a>-->
 </div>
+
+<ng-template #elseBlock>
+  <div class="images div-to-scroll div-with-scroll">
+    <img *ngFor="let image of visible_images"
+          src="{{image.src}}">
+  </div>
+</ng-template>
