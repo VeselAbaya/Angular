@@ -35,9 +35,8 @@ router.get('/:id', function(req, res) {
 
 router.post('/', function(req, res) {
   const new_image = req.body;
-
-  if (!new_image.id || data.find(img => img.id === new_image.id) ||
-       new_image.title.length < 5) {
+  if (!new_image.id || /*'my data from mongoDB'.find(img => img.id === new_image.id) ||*/
+       new_image.name.length < 3) {
     res.status(400).end();
   } else {
     MongoClient.connect(url, function(err, database) {

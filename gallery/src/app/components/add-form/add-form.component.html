@@ -1,8 +1,8 @@
-<form [formGroup]="addForm" (submit)="submit()">
+<form [formGroup]="addForm" (submit)="console.log('kek'); this.addForm.reset()">
   <label class="file_upload">
     <span id="drop_zone">Drop your image here or</span>
     <span class="button">choose it</span>
-    <input type="file" formControlName="image" (change)="handleFileSelect(event)">
+    <input type="file" formControlName="image">
   </label>
 
   <!--Copied from https://www.html5rocks.com/ru/tutorials/file/dndfiles/-->
