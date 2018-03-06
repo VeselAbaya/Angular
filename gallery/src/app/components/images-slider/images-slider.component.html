@@ -1,0 +1,18 @@
+<ngx-carousel
+  [inputs]="carouselOne"
+  (carouselLoad)="myfunc($event)"
+  class="images">
+  <ngx-item NgxCarouselItem
+            *ngFor="let image of images; let i = index">
+    <img class="image" src="{{image.src}}">
+  </ngx-item>
+  <div NgxCarouselPrev class='leftRs'>
+    <img src="https://cdn4.iconfinder.com/data/icons/developer-set-3/128/left-128.png"
+         class="left">
+  </div>
+  <div NgxCarouselNext class='rightRs'>
+    <img src="https://cdn4.iconfinder.com/data/icons/developer-set-3/128/right-128.png"
+         class="right">
+  </div>
+</ngx-carousel>
+

@@ -155,16 +155,24 @@ div.images {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: 20%;
+  padding-bottom: 3%;
   /*display: grid;*/
   /*grid-template-columns: 50% 50%;*/
   /*grid-template-rows: 33% 33% 33%;*/
 }
 
-div.images > img {
-  margin: 1%;
+div.images > div.image {
+  padding: 1%;
   width: 30%;
   height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+div.image > img {
+  width: 95%;
+  height: 95%;
 }
 
 .div-to-scroll{

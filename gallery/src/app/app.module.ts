@@ -9,8 +9,12 @@ import {ImagesService} from './services/images.service';
 import {HttpClientModule} from '@angular/common/http';
 import {CommonModule} from '@angular/common';
 import {TooltipDirective} from './directives/tooltip/tooltip.directive';
-import {AddFormComponent} from "./components/add-form/add-form.component";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {AddFormComponent} from './components/add-form/add-form.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NgxCarouselModule } from 'ngx-carousel';
+import 'hammerjs';
+import {ImagesSliderComponent} from "./components/images-slider/images-slider.component";
 
 @NgModule({
   declarations: [
@@ -18,10 +22,13 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     AppHeaderComponent,
     ImagesComponent,
     AddFormComponent,
-    TooltipDirective
+    TooltipDirective,
+    ImagesSliderComponent
   ],
   imports: [
     BrowserModule,
+    NgxCarouselModule,
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,

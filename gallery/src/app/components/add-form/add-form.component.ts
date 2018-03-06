@@ -1,4 +1,4 @@
-import {Component,  HostListener} from '@angular/core';
+import {Component, HostListener, Input} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {ImagesService} from '../../services/images.service';
 import {saveAs} from 'file-saver';
@@ -10,12 +10,11 @@ import {saveAs} from 'file-saver';
 })
 
 export class AddFormComponent {
-  addForm: FormGroup;
-  constructor(private imagesService: ImagesService) {
-    this.addForm = new FormGroup({
-      'image': new FormControl()
-    });
-  }
+  @Input() addForm: FormGroup = new FormGroup({
+    'image': new FormControl('')
+  });
+
+  constructor(private imagesService: ImagesService) {}
 
   // handleFileSelect(event) {
   //   const file: File = event.target.files[0];
@@ -40,7 +39,6 @@ export class AddFormComponent {
   @HostListener('change')
   onChange() {
     const file: File = event.target.files[0];
-    saveAs(file, file.name);
     this.imagesService.postImage({id: this.imagesService.newId(),
                                         name: file.name,
                                         date: new Date(),

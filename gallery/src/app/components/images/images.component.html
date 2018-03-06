@@ -4,24 +4,24 @@
       <ul class="submenu" style="width: 77.6px;">
         <li>
           <button class="submenu-button"
-                  [class.checked]="this.sorting_button_checked == 'name'"
-                  (click)="this.sorting('name')">
+                  [class.checked]="sorting_button_checked == 'name'"
+                  (click)="sorting('name')">
             name
           </button>
         </li>
 
         <li>
           <button class="submenu-button"
-                  [class.checked]="this.sorting_button_checked == 'date'"
-                  (click)="this.sorting('date')">
+                  [class.checked]="sorting_button_checked == 'date'"
+                  (click)="sorting('date')">
             date
           </button>
         </li>
 
         <li>
           <button class="submenu-button"
-                  [class.checked]="this.sorting_button_checked == 'format'"
-                  (click)="this.sorting('format')">
+                  [class.checked]="sorting_button_checked == 'format'"
+                  (click)="sorting('format')">
             format
           </button>
         </li>
@@ -30,10 +30,10 @@
 
     <li>Show only...
       <ul class="submenu" style="width: 99.81px;">
-        <li *ngFor="let format of this.formats">
+        <li *ngFor="let format of formats">
           <button class="submenu-button"
-                  [class.checked]="this.showonly_button_checked == format"
-                  (click)="this.show_only(format)">
+                  [class.checked]="showonly_button_checked == format"
+                  (click)="show_only(format)">
             {{format}}
           </button>
         </li>
@@ -43,7 +43,7 @@
     <li class="slidermode-li">
       <button class="submenu-button slidermode-button"
               (click)="slidermode_toggle()"
-              [class.checked]="this.slidermode_on">
+              [class.checked]="slidermode_on">
         Slideshow
       </button>
     </li>
@@ -66,36 +66,26 @@
 </div>
 
 
-<div id="carousel-example-generic"
-     class="carousel slide"
-     data-ride="carousel"
-     *ngIf="this.slidermode_on; else elseBlock">
-  <p style="color: red">Doesn't work yet</p>
-  <!--&lt;!&ndash; Wrapper for slides &ndash;&gt;-->
-  <!--<div class="carousel-inner" role="listbox">-->
-    <!--<div class="item active">-->
-      <!--<img src="{{visible_images[0].src}}">-->
-    <!--</div>-->
-    <!--<div *ngFor="let image of visible_images.slice(1)"-->
-         <!--class="item">-->
-      <!--<img src="{{image.src}}">-->
-    <!--</div>-->
-  <!--</div>-->
+<app-image-slider [images]="visible_images"
+                  *ngIf="slidermode_on; else elseBlock">
+</app-image-slider>
 
-  <!--&lt;!&ndash; Controls &ndash;&gt;-->
-  <!--<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">-->
-    <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
-    <!--<span class="sr-only">Previous</span>-->
-  <!--</a>-->
-  <!--<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">-->
-    <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-    <!--<span class="sr-only">Next</span>-->
-  <!--</a>-->
-</div>
+<!--<div id="carousel-example-generic"-->
+     <!--class="carousel slide"-->
+     <!--data-ride="carousel"-->
+     <!--*ngIf="slidermode_on; else elseBlock">-->
+  <!--<p style="color: red">Doesn't work yet</p>-->
+<!--</div>-->
 
 <ng-template #elseBlock>
+  <img id="modal" src="" style="display: none">
   <div class="images div-to-scroll div-with-scroll">
-    <img *ngFor="let image of visible_images"
-          src="{{image.src}}">
+    <div *ngFor="let image of visible_images; let i = index"
+          class="image">
+      <img [@image_fullsize_animation]="states[i]"
+           (click)="fullsize(i)"
+           src="{{image.src}}">
+    </div>
   </div>
 </ng-template>
+

@@ -1,0 +1,54 @@
+ngx-item {
+  margin-top: 1%;
+}
+
+img.image {
+  width: 400px;
+  height: 250px;
+  margin-left: 17%;
+}
+
+img.left {
+  width: 70%;
+  height: 15%;
+  opacity: 1;
+  margin-top: 150%;
+}
+
+img.right {
+  width: 70%;
+  height: 15%;
+  opacity: 1;
+  margin-top: 150%;
+  margin-left: 28%;
+}
+
+.leftRs {
+  overflow: hidden;
+  border: none;
+  outline: none;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  width: 15%;
+  height: 100%;
+  left: 0;
+  background: linear-gradient(to right, black, transparent);
+  opacity: .7;
+}
+
+.rightRs {
+  overflow: hidden;
+  border: none;
+  outline: none;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  width: 15%;
+  height: 100%;
+  right: 0;
+  background: linear-gradient(to left, black, transparent);
+  opacity: .7;
+}
