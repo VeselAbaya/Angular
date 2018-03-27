@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {SubTask, TaskModel} from '../models/task.model';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 
 @Injectable()
 export class TaskService {
@@ -9,7 +9,7 @@ export class TaskService {
 
   // constructor() {
   //   this.tasks = [
-  //     new TaskModel({id: 0, title: 'buy milk', complete: false, subTasks: []})
+  //     new TaskModel( {id: 0, title: 'buy milk', complete: false, subTasks: []})
   //   ];
   // }
 
@@ -18,6 +18,16 @@ export class TaskService {
   // getTasks() {
   //   return this.tasks;
   // }
+
+  getTask(id: Number): Promise<TaskModel> {
+    const url
+      = 'api/todos/' + id.toString();
+    return this.httpClient.get(url)
+      .toPromise()
+      .then((res) => {
+        return res[id];
+      });
+  }
 
   getTasks(): Promise<Array<TaskModel>> {
     return this.httpClient.get('api/todos')
@@ -47,7 +57,7 @@ export class TaskService {
   }
 
   addSubTask(id: number, subTask: SubTask): Promise<any> {
-    const url = 'api/todos?id=' + id.toString();
+    const url = 'api/todos/' + id.toString();
     return this.httpClient.put(url, JSON.stringify(subTask),
                                 { headers: this.getJsonHeaders() })
       .toPromise();
@@ -58,8 +68,10 @@ export class TaskService {
   }
 
   remove(id: number): Promise<any> {
-    return this.httpClient.delete('api/todos/?id=1',
-                                  { headers: this.getJsonHeaders() })
+    console.log(id);
+    return this.httpClient.delete('api/todos/:id',
+                                  { headers: this.getJsonHeaders(),
+                                           /*params: new HttpParams().set('id', id.toString()) */})
       .toPromise();
   }
 

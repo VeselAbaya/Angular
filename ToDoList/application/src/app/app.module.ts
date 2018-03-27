@@ -14,6 +14,8 @@ import {AppHeaderComponent} from './components/app-header/app-header.component';
 import {ConfirmGuard} from './services/confirm.guard';
 import {TooltipDirective} from './directives/tooltip/tooltip.directive';
 import {TimeoutDirective} from './directives/timeout/timeout.directive';
+import {HttpClientModule} from "@angular/common/http";
+import {CommonModule} from "@angular/common";
 
 
 @NgModule({
@@ -29,6 +31,8 @@ import {TimeoutDirective} from './directives/timeout/timeout.directive';
   ],
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule,
+    HttpClientModule,
+    CommonModule,
     RouterModule.forRoot([
       {
         path: '',

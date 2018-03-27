@@ -27,6 +27,7 @@ export class ImagesComponent implements OnInit {
 
   private states: Array<string> = [];
   private visible_images: Array<ImageModel> = [];
+  private selected_images: Array<ImageModel> = [];
   private sorting_button_checked: string = null;
   private showonly_button_checked: string = null;
   private slidermode_on = false;
@@ -51,55 +52,14 @@ export class ImagesComponent implements OnInit {
       });
   }
 
-  fullsize(index: number) {
-    this.states[index] = (this.states[index] === 'small' ? 'large' : 'small');
+  select_image(img: ImageModel) {
+    const index = this.selected_images.findIndex((image) => img.id === image.id);
+    if (index === -1) {
+      this.selected_images.push(img);
+    } else {
+      this.selected_images.splice(index, 1);
+    }
   }
-
-  // full_size() {
-  //   // language=JQuery-CSS
-  //   let lastImage = null;
-  //   let modal = jQuery(this._elRef.nativeElement).find('#modal');
-  //   jQuery(this._elRef.nativeElement).find('.image').on('click', function(e) {
-  //     if (lastImage) {
-  //       lastImage.css('opacity', 1);
-  //     }
-  //
-  //     let jthis = jQuery(e.target);
-  //     modal.css({
-  //       'top'     : Math.round(parseInt(jthis.offset().top, 1)),
-  //       'left'    : Math.round(parseInt(jthis.offset().left, 1)),
-  //       'width'   : Math.round(jthis.width()),
-  //       'height'  : Math.round(jthis.height()),
-  //       'opacity' : 1,
-  //       'display' : 'block',
-  //       'position': 'absolute',
-  //       'z-index' : 50
-  //     });
-  //     modal.attr('src', jthis.attr('src'));
-  //     jthis.css('opacity', 0);
-  //
-  //     lastImage = jthis;
-  //
-  //     modal.animate({
-  //       'top': Math.round((window.innerHeight) / 2 - jthis.height()),
-  //       'left': Math.round((window.innerWidth) / 2 - jthis.width()),
-  //       'width': Math.round(jthis.width() * 2),
-  //       'height': Math.round(jthis.height() * 2)
-  //     }, 800);
-  //
-  //     modal.on('click', function(e) {
-  //       modal.animate({
-  //         'top'    : Math.round(parseInt(lastImage.offset().top, 1)),
-  //         'left'   : Math.round(parseInt(lastImage.offset().left, 1)),
-  //         'width'  : Math.round(lastImage.width()),
-  //         'height' : Math.round(lastImage.height()),
-  //       }, 800);
-  //       modal.css('display', 'none');
-  //
-  //       jthis.css('opacity', 1);
-  //     });
-  //   });
-  // }
 
   slidermode_toggle() {
     this.slidermode_on = !this.slidermode_on;

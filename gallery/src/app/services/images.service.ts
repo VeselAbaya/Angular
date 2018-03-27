@@ -15,7 +15,7 @@ export class ImagesService {
   getImages(): Promise<Array<ImageModel>> {
     return this.httpClient.get('api/images')
       .toPromise()
-      .then(res => {
+      .then((res: Array<any>) => {
         // console.log(res);
         this.id = res.length;
         return res.map((item) => new ImageModel(item));

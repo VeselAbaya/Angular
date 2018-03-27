@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {SubTask, TaskModel} from '../../models/task.model';
 import {TaskService} from '../../services/task.service';
-import {AddSubTaskComponent} from '../addSubTask-form/addSubTask-form.component';
 
 @Component({
   selector: 'tasks',
@@ -35,7 +34,10 @@ export class TasksComponent implements OnInit{
   }
 
   remove(id: number) {
-    this.taskService.remove(id); // <--------- При нажатии на кнопку remove кидается ошибка ?QUESTION?
+    this.taskService.remove(id)
+      .then(() => {
+        this.tasks.splice(this.tasks.findIndex((task) => task.id === id), 1);
+      }); // <--------- При нажатии на кнопку remove кидается ошибка ?QUESTION?
   }
 
   edit(index: number, editedTask: string) {
@@ -49,12 +51,16 @@ export class TasksComponent implements OnInit{
     this.toggle(index);
   }
 
-  startPushingSubTasks(index) {
-    this.toggle(index);
+  startPushingSubTasks(id: number) {
+    this.toggle(id);
 
-    if (this.subTaskEditing.indexOf(index) !== -1) {
-      this.subTaskEditing.splice(this.subTaskEditing.indexOf(index), 1);
-    } else { this.subTaskEditing.push(index); }
+    if (this.subTaskEditing.indexOf(id !== -1)) {
+      this.subTaskEditing.splice(this.subTaskEditing.indexOf(id, 1);
+      this.taskService.getTask(id)
+        .then(res => {
+          // this.tasks = res;
+        });
+    } else { this.subTaskEditing.push(id); }
   }
 
   startEditing(index: number) {

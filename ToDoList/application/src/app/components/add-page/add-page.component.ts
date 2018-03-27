@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {FormArray, FormControl, FormGroup, Validators} from '@angular/forms';
 import {TaskService} from '../../services/task.service';
-import {TaskModel} from '../../models/task.model';
+import {SubTask, TaskModel} from '../../models/task.model';
 
 @Component({
   selector: 'add-page',
@@ -28,17 +28,17 @@ export class AddPageComponent {
     for (const formGroup of formGroups) {
       const subTasksFormLength = (formGroup.get('subTasks') as FormArray).length;
 
-      const task: TaskModel = new TaskModel({title: formGroup.get('addTask').value,
+      const task: TaskModel = new TaskModel({id: this.taskService.newId(),
+                                             title: formGroup.get('addTask').value,
                                              complete: false,
                                              subTasks: []});
 
       for (let i = 0; i !== subTasksFormLength; ++i) {
         if ((formGroup.get('subTasks') as FormArray).at(i).value) {
-          task.subTasks.push(new TaskModel({
+          task.subTasks.push({
             title: (formGroup.get('subTasks') as FormArray).at(i).value,
-            complete: false,
-            subTasks: []
-          }));
+            complete: false
+          });
         }
       }
 

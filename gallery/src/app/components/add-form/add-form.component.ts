@@ -16,26 +16,6 @@ export class AddFormComponent {
 
   constructor(private imagesService: ImagesService) {}
 
-  // handleFileSelect(event) {
-  //   const file: File = event.target.files[0];
-  //
-  //   saveAs(file);
-  //   // Only process image files.
-  //   if (!file.type.match('image.*')) {
-  //     console.error('It is not an image');
-  //   }
-  //
-  //   const reader = new FileReader();
-  //
-  //   // Closure to capture the file information.
-  //   reader.onload = function(event) {
-  //     // The file's text will be printed here
-  //     console.log(event.target.result);
-  //   };
-  //
-  //   saveAs(reader.readAsArrayBuffer(file), 'image.png');
-  // }
-
   @HostListener('change')
   onChange() {
     const file: File = event.target.files[0];

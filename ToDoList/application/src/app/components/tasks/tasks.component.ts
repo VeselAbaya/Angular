@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {TaskModel} from '../../models/task.model';
+import {SubTask, TaskModel} from '../../models/task.model';
 import {TaskService} from '../../services/task.service';
-import {AddSubTaskComponent} from "../addSubTask-form/addSubTask-form.component";
+import {AddSubTaskComponent} from '../addSubTask-form/addSubTask-form.component';
 
 @Component({
   selector: 'tasks',
@@ -19,14 +19,17 @@ export class TasksComponent implements OnInit{
 
   ngOnInit() {
     if (this.index === -1 && this.tasks.length === 0) {
-      this.tasks = this.taskService.getTasks();
+      this.taskService.getTasks()
+        .then(res => {
+          this.tasks = res;
+        });
     }
   }
 
   constructor(private taskService: TaskService) {}
 
   toggle(index: number) {
-    if (this.tasks[index].subTasks.every((subTask: TaskModel) => subTask.complete)) {
+    if (this.tasks[index].subTasks.every((subTask: SubTask) => subTask.complete)) {
       this.tasks[index].complete = !this.tasks[index].complete;
     } else { this.tasks[index].complete = false; }
   }
@@ -37,7 +40,9 @@ export class TasksComponent implements OnInit{
 
   edit(index: number, editedTask: string) {
     if (editedTask) {
-      this.tasks[index].title = editedTask;
+      const task: TaskModel = this.tasks[index];
+      task.title = editedTask;
+      this.taskService.edit(index, task);
       this.editingIndex = null;
     }
 

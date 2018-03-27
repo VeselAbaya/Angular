@@ -14,6 +14,10 @@ export class AppComponent implements OnInit {
   constructor(private taskService: TaskService) {}
 
   ngOnInit() {
-    this.tasks = this.taskService.getTasks();
+    this.taskService.getTasks()
+      .then(res => {
+        console.log(res);
+        // this.tasks = res;
+      });
   }
 }

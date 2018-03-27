@@ -18,7 +18,6 @@ export class TimeoutDirective {
 
   @HostListener('click')
   onClick() {
-    console.log(this.timeout);
     clearTimeout(this.timeoutId);
     this.timeoutId = setTimeout(() => {
       this.router.navigate([this.route]);

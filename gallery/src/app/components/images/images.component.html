@@ -70,21 +70,15 @@
                   *ngIf="slidermode_on; else elseBlock">
 </app-image-slider>
 
-<!--<div id="carousel-example-generic"-->
-     <!--class="carousel slide"-->
-     <!--data-ride="carousel"-->
-     <!--*ngIf="slidermode_on; else elseBlock">-->
-  <!--<p style="color: red">Doesn't work yet</p>-->
-<!--</div>-->
-
 <ng-template #elseBlock>
   <img id="modal" src="" style="display: none">
   <div class="images div-to-scroll div-with-scroll">
     <div *ngFor="let image of visible_images; let i = index"
-          class="image">
-      <img [@image_fullsize_animation]="states[i]"
-           (click)="fullsize(i)"
-           src="{{image.src}}">
+          class="image"
+          [class.selected]="selected_images.indexOf(image) !== -1"
+          (click)="select_image(image)">
+      <img src="{{image.src}}"
+           [@image_fullsize_animation]="states[i]">
     </div>
   </div>
 </ng-template>

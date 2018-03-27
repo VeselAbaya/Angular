@@ -54,15 +54,16 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res) => {
     const indexToChange = todos_initial_array.findIndex(todo => todo.id == req.params.id);
+    console.log(req.body);
     if(indexToChange < 0) {
-      res.status(400).end()
+      res.status(400).end();
     } else {
-        Object.assign(todos_initial_array[indexToChange].subTasks, req.body);
+        todos_initial_array[indexToChange].subTasks.push(req.body);
         res.status(200).json(todos_initial_array[indexToChange]);
     }
 });
 
-router.delete('/:id', function (req, res) {
+router.delete('/?id', function (req, res) {
     const indexToDelete = todos_initial_array.findIndex((todo) => todo.id === req.params.id);
     if(indexToDelete < 0) {
       res.status(400).end();

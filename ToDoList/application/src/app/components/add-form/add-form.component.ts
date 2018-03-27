@@ -22,19 +22,20 @@ export class AddFormComponent {
   add(formGroup: FormGroup) {
     const subTasksFormLenght = this.subTasks.length;
 
-    const task: TaskModel = new TaskModel({title: formGroup.get('addTask').value,
+    const task: TaskModel = new TaskModel({id: this.taskService.newId(),
+                                           title: formGroup.get('addTask').value,
                                            complete: false,
                                            subTasks: []});
 
     for (let i = 0; i !== subTasksFormLenght; ++i) {
       if (this.subTasks.at(i).value) {
-        task.subTasks.push(new TaskModel({title: this.subTasks.at(i).value,
-                                          complete: false,
-                                          subTasks: []}));
+        task.subTasks.push({title: this.subTasks.at(i).value,
+                            complete: false});
       }
     }
 
-    this.taskService.addTask(task);
+    this.taskService.addTask(task)
+      .then();
     this.addForm.reset();
   }
 
