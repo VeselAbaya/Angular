@@ -1,0 +1,44 @@
+button {
+  outline: none;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top__left_part {
+  color: #ae84ac;
+  font-family: SansSerif;
+  opacity: 0.5
+}
+
+.too__right_part {
+  font-family: SansSerif;
+}
+
+.download_button {
+  background-color: transparent;
+  cursor:pointer;
+  overflow: hidden;
+  border: none;
+}
+
+.download_text {
+  display: inline;
+  margin-top: 0;
+  color: #ae84ac;
+  font-family: SansSerif;
+  font-size: medium;
+  opacity: 0.5
+}
+
+.title {
+  color: #ae84ac;
+  display: flex;
+  justify-content: center;
+  font-family: SansSerif;
+  opacity: 0.5;
+  font-style: italic;
+}
+

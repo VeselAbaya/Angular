@@ -1,0 +1,8 @@
+@import 'app/directives/tooltip/tooltip.directive.css';
+
+body {
+  background: url(assets/img/background.jpg) no-repeat center top / cover;
+  margin-top: 0;
+  height: 100%;
+  overflow: hidden;
+}

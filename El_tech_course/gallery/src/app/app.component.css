@@ -1,0 +1,10 @@
+.container {
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color: rgba(0, 0, 0, 0.65);
+  padding-bottom: 5%;
+  padding-left: 0;
+  padding-right: 0;
+  height: 100vh;
+}
+

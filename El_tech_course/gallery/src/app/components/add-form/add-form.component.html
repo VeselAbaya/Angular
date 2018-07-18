@@ -1,0 +1,19 @@
+<form [formGroup]="addForm" (submit)="console.log('kek'); this.addForm.reset()">
+  <label class="file_upload">
+    <span id="drop_zone">Drop your image here or</span>
+    <span class="button">choose it</span>
+    <input type="file" formControlName="image">
+  </label>
+
+  <!--Copied from https://www.html5rocks.com/ru/tutorials/file/dndfiles/-->
+  <script>
+    function handleDragOver(evt) {
+      evt.stopPropagation();
+      evt.preventDefault();
+    }
+
+    // Setup the dnd listeners.
+    var dropZone = document.getElementById('drop_zone');
+    dropZone.addEventListener('dragover', handleDragOver, false);
+  </script>
+</form>
