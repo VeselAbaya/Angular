@@ -14,9 +14,12 @@
 <div class="row">
   <div class="col-sm-12">
     <div class="dropdown">
-      <button class="btn dropdown-toggle" data-toggle="dropdown">Manage recipe</button>
+      <button class="btn dropdown-toggle" data-toggle="dropdown"
+              aria-expanded="false">
+        Manage recipe
+      </button>
       <div class="dropdown-menu">
-        <button class="btn dropdown-item">Add Ingridients</button>
+        <button class="btn dropdown-item" (click)="onAddToShoppingList()">To shopping list</button>
         <button class="btn dropdown-item">Edit recipe</button>
         <button class="btn dropdown-item">Delete recipe</button>
       </div>
@@ -32,6 +35,11 @@
 
 <div class="row">
   <div class="col-sm-12">
-    Ingredients
+    <ul class="list-group">
+      <li class="list-group-item"
+          *ngFor="let ingredient of recipe.ingredients">
+        {{ingredient.name}}: {{ingredient.amount}}
+      </li>
+    </ul>
   </div>
 </div>
